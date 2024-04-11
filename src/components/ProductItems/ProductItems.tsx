@@ -27,20 +27,22 @@ function ProductItems(props: ProductItemsProps ) {
 			</div>
 			<div className={styles['description']}>
 				<div className={styles['image']} style={{backgroundImage: `url('${props.image}')`}}></div>
-				<div className={styles['price_product']}>
-					<div className={styles['price']}><p>Цена</p> {props.price}&nbsp;<span>₽</span></div>
-				</div>
-				<div className={styles['rating']}>
-					<p>Рейтинг</p> 
-					<button>{props.rating} <img src='/rating.svg'></img></button>
-				</div>
-				<div className={styles['ingredients']}>
-					<p>Состав:</p>
-					<ul>
-						{props.ingredients.map((ingredient, index) => (
-							<li key={index}>{ingredient}</li>
-						))}
-					</ul>
+				<div className={styles['info']}>
+					<div className={styles['price_product']}>
+						<div className={styles['price']}><p>Цена</p> {props.price}&nbsp;<span>₽</span></div>
+					</div>
+					<div className={styles['rating']}>
+						<p>Рейтинг</p> 
+						<button>{props.rating} <img src='/rating.svg'></img></button>
+					</div>
+					<div className={styles['ingredients']}>
+						<p>Состав:</p>
+						<ul>
+							{props.ingredients.map((ingredient, index) => (
+								<li key={index}>{ingredient}</li>
+							))}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
