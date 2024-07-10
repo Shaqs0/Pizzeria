@@ -11,8 +11,9 @@ export function Product() {
 	const items = useSelector((s: RootState) => s.product.items);
 
 	const getItem = async (id: number) => {
-		const { data } = await axios.get<ProductInterface>(`${PREFIX}/products/${id}`);
+		const { data } = await axios.get<ProductInterface>(`${PREFIX}/products/1`);
 		return data;
+		console.log(id);
 	};
 
 	const loadAllItems = async () => {
@@ -27,8 +28,7 @@ export function Product() {
 
 	return (
 		<>
-			{console.log(items)}
-			{cardProducts.length > 0 && cardProducts.map(product => (
+			{cardProducts.map(product => (
 				<ProductItems key={product.id} {...product} />
 			))}
 		</>

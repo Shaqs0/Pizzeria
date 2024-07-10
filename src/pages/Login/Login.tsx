@@ -48,11 +48,11 @@ export function Login() {
 		<form className={styles['form']} onSubmit={submit}>
 			<div className={styles['field']}>
 				<label htmlFor='email'>Ваш email</label>
-				<Input id='email' name='email' placeholder='Email'></Input>
+				<Input id='email' name='email' placeholder='Email' autoComplete="current-email"></Input>
 			</div>
 			<div className={styles['field']}>
 				<label htmlFor='password'>Ваш пароль</label>
-				<Input id='password' name='password' type='password' placeholder='Пароль'></Input>
+				<Input id="password" name="password" type="password" placeholder="Пароль" autoComplete="current-password" ></Input>
 			</div>
 			<Button appearence='big'>Вход</Button>
 		</form>

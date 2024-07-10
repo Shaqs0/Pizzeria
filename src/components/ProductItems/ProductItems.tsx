@@ -10,7 +10,7 @@ function ProductItems(props: ProductItemsProps ) {
 	
 	const add = () => {
 		dispatch(productActions.addToCart(props.id));
-		console.log('a');
+		console.log(props.id);
 	};
 	
 	return (
